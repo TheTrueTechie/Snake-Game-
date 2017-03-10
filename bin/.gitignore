@@ -1,8 +1,7 @@
-/GameController.class
-/Model.class
-/Snake.class
-/View.class
 /Data.class
+/GameController.class
 /MainMenu.class
+/Snake.class
 /SnakeModel.class
 /SnakesFood.class
+/View.class
