@@ -9,7 +9,7 @@ public class View extends JPanel {
 	SnakeModel snakeModel;
 	
 	View() {
-		repaint();
+		
 	}
 	
 	@Override
