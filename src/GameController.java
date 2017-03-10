@@ -29,6 +29,8 @@ public class GameController implements ActionListener, KeyListener {
 
 	@Override
 	public void keyTyped(KeyEvent e) {
+		
+	}
 
 	
 
