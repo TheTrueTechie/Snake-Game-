@@ -24,6 +24,7 @@ public class GameController implements ActionListener, KeyListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		view.repaint();
+		data.update();
 
 	}
 

@@ -11,4 +11,8 @@ public class Data {
 	 
 	 return snakeModel; 
  }
+public void update() {
+snakeModel.update();
+	
+}
 }
