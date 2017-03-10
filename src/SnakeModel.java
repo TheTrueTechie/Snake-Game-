@@ -17,6 +17,21 @@ public class SnakeModel {
 	}
 
 	public void update() {
+		if (upKey == true) {
+			y = y + 1;
+		}
+
+		if (downKey == true) {
+			y = y - 1;
+		}
+
+		if (rightKey == true) {
+			x = x + 1;
+		}
+
+		if (leftKey == true) {
+			x = x - 1;
+		}
 
 	}
 
