@@ -8,6 +8,10 @@ public class View extends JPanel {
 	SnakeModel snakeModel;
 
 	View() {
+<<<<<<< HEAD
+		
+=======
+>>>>>>> TheTrueTechie/master
 	}
 
 	@Override
