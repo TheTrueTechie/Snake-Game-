@@ -12,6 +12,8 @@ public class Snake {
 
 		mainFrame.add(miniView);
 
+		mainFrame.addKeyListener(miniController);
+
 		mainFrame.setTitle(snakeGame);
 
 		mainFrame.setVisible(true);
