@@ -18,25 +18,25 @@ public class SnakeModel {
 
 	public void update() {
 		if (upKey == true) {
-			y = y + 1;
+			y = y - 3;
 		}
 
 		if (downKey == true) {
-			y = y - 1;
+			y = y + 3;
 		}
 
 		if (rightKey == true) {
-			x = x + 1;
+			x = x + 3;
 		}
 
 		if (leftKey == true) {
-			x = x - 1;
+			x = x - 3;
 		}
 
 	}
 
 	public void draw(Graphics g) {
 		g.setColor(Color.BLACK);
-		g.drawRect(y, x, 10, 20);
+		g.drawRect(x, y, 10, 20);
 	}
 }

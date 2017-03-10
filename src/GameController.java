@@ -30,10 +30,8 @@ public class GameController implements ActionListener, KeyListener {
 
 	@Override
 	public void keyTyped(KeyEvent e) {
-		
-	}
 
-	
+	}
 
 	@Override
 	public void keyPressed(KeyEvent e) {
@@ -42,6 +40,7 @@ public class GameController implements ActionListener, KeyListener {
 			SnakeModel.downKey = false;
 			SnakeModel.leftKey = false;
 			SnakeModel.rightKey = false;
+			System.out.println("Up Pressed!");
 		}
 
 		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
@@ -49,20 +48,23 @@ public class GameController implements ActionListener, KeyListener {
 			SnakeModel.downKey = true;
 			SnakeModel.leftKey = false;
 			SnakeModel.rightKey = false;
+			System.out.println("Down Pressed!");
 		}
 
 		if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
 			SnakeModel.upKey = false;
 			SnakeModel.downKey = false;
-			SnakeModel.leftKey = true;
-			SnakeModel.rightKey = false;
+			SnakeModel.leftKey = false;
+			SnakeModel.rightKey = true;
+			System.out.println("Right Pressed!");
 		}
 
 		if (e.getKeyCode() == KeyEvent.VK_LEFT) {
 			SnakeModel.upKey = false;
 			SnakeModel.downKey = false;
-			SnakeModel.leftKey = false;
-			SnakeModel.rightKey = true;
+			SnakeModel.leftKey = true;
+			SnakeModel.rightKey = false;
+			System.out.println("Left Pressed!");
 		}
 
 	}
