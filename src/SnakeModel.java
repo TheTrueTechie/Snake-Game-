@@ -14,6 +14,7 @@ public class SnakeModel {
 		this.x = x;
 		this.y = y;
 
+
 	}
 
 	public void update() {
@@ -32,7 +33,22 @@ public class SnakeModel {
 		if (leftKey == true) {
 			x = x - 3;
 		}
-
+		teleport();
+	}
+	void teleport(){
+		if (x < 0){
+			
+			x = Snake.WIDTH;
+		}
+		if(x > Snake.WIDTH){
+			x = 0;
+		}
+		if(y<0){
+			y = Snake.HEIGHT;
+		}
+		if(y > Snake.HEIGHT){
+			y = 0;
+		}
 	}
 
 	public void draw(Graphics g) {
