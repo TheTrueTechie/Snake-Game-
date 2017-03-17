@@ -62,11 +62,12 @@ public class SnakeModel {
 		pastY.add(0, y);
 		delay++;
 		if (delay > 5) {
-			g.drawRect(pastX.pop(), pastY.pop(), 10, 20);
+			g.fillRect(pastX.pop(), pastY.pop(), 10, 10);
 
 		}
 
 		g.setColor(Color.BLACK);
-		g.drawRect(x, y, 10, 20);
+		g.fillRect(x, y, 10, 10);
+		g.drawRect(x, y, 10, 10);
 	}
 }
