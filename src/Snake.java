@@ -2,7 +2,7 @@ import javax.swing.JFrame;
 
 public class Snake {
 	public static final int WIDTH = 1920;
-	public static final int HEIGHT = 1080;
+	public static final int HEIGHT = 980;
 	public static void main(String[] args) {
 		Data miniData = new Data();
 		View miniView = new View();
