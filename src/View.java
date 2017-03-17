@@ -6,17 +6,14 @@ import javax.swing.JPanel;
 public class View extends JPanel {
 
 	SnakeModel snakeModel;
+	SnakesFood food = new SnakesFood();
 
 	View() {
-
 	}
 
-	@Override
 	public void paintComponent(Graphics g) {
-		g.setColor(Color.black);
-
 		snakeModel.draw(g);
-
+		food.foodGraphics(g);
 	}
 
 	public void setSnake(SnakeModel snakeModel) {

@@ -53,6 +53,7 @@ public class SnakeModel {
 
 	public void draw(Graphics g) {
 		g.setColor(Color.BLACK);
-		g.drawRect(x, y, 10, 20);
+		g.fillRect(x, y, 10, 10);
+		g.drawRect(x, y, 10, 10);
 	}
 }
