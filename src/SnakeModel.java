@@ -7,7 +7,7 @@ public class SnakeModel {
 	int y;
 
 	int delay = 0;
-
+	SnakesFood food = new SnakesFood(this);
 	Stack<Integer> pastX = new Stack<Integer>();
 	Stack<Integer> pastY = new Stack<Integer>();
 
@@ -39,6 +39,8 @@ public class SnakeModel {
 			x = x - 3;
 		}
 		teleport();
+		food.detectCollision();
+        food.collision();
 	}
 
 	void teleport() {

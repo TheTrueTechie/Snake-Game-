@@ -6,7 +6,7 @@ import javax.swing.JPanel;
 public class View extends JPanel {
 
 	SnakeModel snakeModel;
-	SnakesFood food = new SnakesFood();
+	SnakesFood food;
 
 	View() {
 	}
@@ -18,7 +18,7 @@ public class View extends JPanel {
 
 	public void setSnake(SnakeModel snakeModel) {
 		this.snakeModel = snakeModel;
-
+		food = snakeModel.food;
 	}
 
 }
