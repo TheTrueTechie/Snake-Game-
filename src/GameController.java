@@ -35,32 +35,34 @@ public class GameController implements ActionListener, KeyListener {
 
 	@Override
 	public void keyPressed(KeyEvent e) {
-		if (e.getKeyCode() == KeyEvent.VK_UP) {
+		if (e.getKeyCode() == KeyEvent.VK_UP && SnakeModel.downKey == false) {
 			SnakeModel.upKey = true;
 			SnakeModel.downKey = false;
 			SnakeModel.leftKey = false;
 			SnakeModel.rightKey = false;
 		}
 
-		if (e.getKeyCode() == KeyEvent.VK_DOWN) {
+		if (e.getKeyCode() == KeyEvent.VK_DOWN && SnakeModel.upKey == false) {
 			SnakeModel.upKey = false;
 			SnakeModel.downKey = true;
 			SnakeModel.leftKey = false;
 			SnakeModel.rightKey = false;
 		}
 
-		if (e.getKeyCode() == KeyEvent.VK_RIGHT) {
+		if (e.getKeyCode() == KeyEvent.VK_RIGHT && SnakeModel.leftKey == false) {
+
 			SnakeModel.upKey = false;
 			SnakeModel.downKey = false;
 			SnakeModel.leftKey = false;
 			SnakeModel.rightKey = true;
 		}
 
-		if (e.getKeyCode() == KeyEvent.VK_LEFT) {
+		if (e.getKeyCode() == KeyEvent.VK_LEFT && SnakeModel.rightKey == false) {
 			SnakeModel.upKey = false;
 			SnakeModel.downKey = false;
 			SnakeModel.leftKey = true;
 			SnakeModel.rightKey = false;
+
 		}
 
 	}
