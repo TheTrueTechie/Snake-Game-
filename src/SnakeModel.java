@@ -8,6 +8,8 @@ public class SnakeModel {
 	int y;
 	int prevXY = 0;
 	int bufferLength = 10;
+	int lengthOfSnake = 5;
+	int totalLengthOfSnake = 1;
 
 	int delay = 0;
 	SnakesFood food = new SnakesFood(this);
@@ -47,6 +49,7 @@ public class SnakeModel {
 		teleport();
 		food.detectCollision();
 		food.collision();
+
 	}
 
 	void teleport() {
@@ -94,6 +97,13 @@ public class SnakeModel {
 		prevXY = xyIndex.get(xyIndex.size() - 1);
 
 		bufferLength += 5;
+
+		System.out.println(prevXY);
+		System.out.println(lengthOfSnake);
+
+		totalLengthOfSnake = prevXY / lengthOfSnake;
+
+		System.out.println(totalLengthOfSnake + 1);
 	}
 
 }
