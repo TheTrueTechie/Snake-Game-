@@ -1,15 +1,20 @@
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.ArrayList;
 import java.util.Stack;
 
 public class SnakeModel {
 	int x;
 	int y;
+	int prevXY = 0;
+	int bufferLength = 10;
 
 	int delay = 0;
 	SnakesFood food = new SnakesFood(this);
 	Stack<Integer> pastX = new Stack<Integer>();
 	Stack<Integer> pastY = new Stack<Integer>();
+
+	ArrayList<Integer> xyIndex = new ArrayList<Integer>();
 
 	public static boolean upKey = false;
 	public static boolean downKey = false;
@@ -20,6 +25,7 @@ public class SnakeModel {
 		this.x = x;
 		this.y = y;
 
+		xyIndex.add(0);
 	}
 
 	public void update() {
@@ -60,15 +66,19 @@ public class SnakeModel {
 	}
 
 	public void draw(Graphics g) {
+
 		pastX.add(0, x);
 		pastY.add(0, y);
-		delay++;
-		if (delay > 10) {
-			g.fillRect(pastX.get(5), pastY.get(5), 10, 10);
 
+		delay++;
+		if (delay > bufferLength) {
+			for (int xy : xyIndex) {
+
+				g.fillRect(pastX.get(xy), pastY.get(xy), 10, 10);
+
+			}
 			pastX.pop();
 			pastY.pop();
-
 		}
 
 		g.setColor(Color.BLACK);
@@ -76,4 +86,14 @@ public class SnakeModel {
 		g.drawRect(x, y, 10, 10);
 
 	}
+
+	public void growSnake() {
+		prevXY += 5;
+		xyIndex.add(prevXY);
+
+		prevXY = xyIndex.get(xyIndex.size() - 1);
+
+		bufferLength += 5;
+	}
+
 }
