@@ -20,6 +20,7 @@ public class View extends JPanel {
 
 		g.setColor(Color.BLACK);
 		g.drawString(("Score: " + food.lengthOfSnake), 15, 15);
+
 	}
 
 	public void setSnake(SnakeModel snakeModel) {
