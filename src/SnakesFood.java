@@ -7,7 +7,7 @@ public class SnakesFood {
 	int y = new Random().nextInt(960);
 	boolean z = false;
 	SnakeModel snake;
-
+	Recatangle snakeHead;
 	SnakesFood(SnakeModel snakeModel) {
 		this.snake = snakeModel;
 	}
@@ -28,11 +28,11 @@ public class SnakesFood {
 
 	public boolean detectCollision() {
 		if (((snake.x >= this.x && snake.x <= this.x + 10) || (snake.x <= this.x && snake.x >= this.x - 10))
-				&& (snake.y >= this.y && snake.y <= this.y - 10)) {
+				&& (snake.y >= this.y && snake.y <= this.y + 10)) {
 			z = true;
 		}
 		if (((snake.x >= this.x && snake.x <= this.x + 10) || (snake.x <= this.x && snake.x >= this.x - 10))
-				&& (snake.y - 10 >= this.y && snake.y  <= this.y - 10)) {
+				&& (snake.y + 10 >= this.y && snake.y + 10 <= this.y + 10)) {
 			z = true;
 		} else {
 			z = false;
