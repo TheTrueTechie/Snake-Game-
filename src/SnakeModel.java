@@ -11,8 +11,8 @@ public class SnakeModel {
 	boolean hit = false;
 	int prevXY = 0;
 	int bufferLength = 10;
-	int lengthOfSnake = 5;
-	int totalLengthOfSnake = 1;
+	// int lengthOfSnake = 5;
+	// int totalLengthOfSnake = 1;
 
 	ArrayList<Integer> xyIndex = new ArrayList<Integer>();
 	ArrayList<Rectangle> rectangle = new ArrayList<>();
@@ -111,11 +111,13 @@ public class SnakeModel {
 		bufferLength += 5;
 
 		System.out.println(prevXY);
-		System.out.println(lengthOfSnake);
+		// System.out.println(lengthOfSnake);
 
-		totalLengthOfSnake = prevXY / lengthOfSnake;
+		// totalLengthOfSnake = prevXY / lengthOfSnake;
 
-		System.out.println(totalLengthOfSnake + 1);
+		// System.out.println(totalLengthOfSnake + 1);
+
+		System.out.print(food.lengthOfSnake);
 	}
 
 }

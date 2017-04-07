@@ -4,6 +4,7 @@ import java.awt.Rectangle;
 import java.util.Random;
 
 public class SnakesFood {
+	public int lengthOfSnake = 1;
 	int x = new Random().nextInt(1920);
 	int y = new Random().nextInt(960);
 	boolean z = false;
@@ -32,6 +33,7 @@ public class SnakesFood {
 
 		collisionBox.setLocation(x, y);
 		if (collisionBox.intersects(snake.head)) {
+
 			z = true;
 		} else {
 			z = false;
