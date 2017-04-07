@@ -50,6 +50,7 @@ public class SnakesFood {
 			snake.pastY.add(0, y);
 			// Snake body + 1
 			snake.growSnake();
+			lengthOfSnake++;
 		}
 	}
 }

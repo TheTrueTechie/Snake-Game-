@@ -117,7 +117,7 @@ public class SnakeModel {
 
 		// System.out.println(totalLengthOfSnake + 1);
 
-		System.out.print(food.lengthOfSnake);
+		System.out.print(food.lengthOfSnake + "yo");
 	}
 
 }
