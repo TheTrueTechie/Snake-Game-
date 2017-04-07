@@ -1,5 +1,6 @@
 import java.awt.Color;
 import java.awt.Graphics;
+import java.awt.Rectangle;
 import java.util.Random;
 
 public class SnakesFood {
@@ -7,7 +8,8 @@ public class SnakesFood {
 	int y = new Random().nextInt(960);
 	boolean z = false;
 	SnakeModel snake;
-	Recatangle snakeHead;
+	Rectangle collisionBox = new Rectangle(x, y, 10, 10);
+
 	SnakesFood(SnakeModel snakeModel) {
 		this.snake = snakeModel;
 	}
@@ -23,16 +25,13 @@ public class SnakesFood {
 		g.fillRect(x, y, 10, 10);
 		g.drawRect(x, y, 10, 10);
 		g.setColor(Color.WHITE);
-		g.drawRect(snake.x, snake.y,1, 1);
+		g.drawRect(snake.x, snake.y, 1, 1);
 	}
 
 	public boolean detectCollision() {
-		if (((snake.x >= this.x && snake.x <= this.x + 10) || (snake.x <= this.x && snake.x >= this.x - 10))
-				&& (snake.y >= this.y && snake.y <= this.y + 10)) {
-			z = true;
-		}
-		if (((snake.x >= this.x && snake.x <= this.x + 10) || (snake.x <= this.x && snake.x >= this.x - 10))
-				&& (snake.y + 10 >= this.y && snake.y + 10 <= this.y + 10)) {
+
+		collisionBox.setLocation(x, y);
+		if (collisionBox.intersects(snake.head)) {
 			z = true;
 		} else {
 			z = false;

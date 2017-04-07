@@ -16,7 +16,7 @@ public class SnakeModel {
 
 	ArrayList<Integer> xyIndex = new ArrayList<Integer>();
 	ArrayList<Rectangle> rectangle = new ArrayList<>();
-	Rectangle body = new Rectangle(x, y, 10, 10);
+	Rectangle head = new Rectangle(x, y, 10, 10);
 
 	SnakesFood food = new SnakesFood(this);
 	Stack<Integer> pastX = new Stack<Integer>();
@@ -35,6 +35,7 @@ public class SnakeModel {
 	}
 
 	public void update() {
+		head.setLocation(x, y);
 		if (upKey == true) {
 			y = y - 3;
 		}
