@@ -85,6 +85,7 @@ public class SnakeModel {
 		pastX.add(0, x);
 		pastY.add(0, y);
 		delay++;
+		g.setColor(Color.BLACK);
 		if (delay > bufferLength) {
 			for (int xy : xyIndex) {
 
@@ -95,7 +96,6 @@ public class SnakeModel {
 
 		}
 
-		g.setColor(Color.BLACK);
 		g.fillRect(x, y, 10, 10);
 		g.drawRect(x, y, 10, 10);
 

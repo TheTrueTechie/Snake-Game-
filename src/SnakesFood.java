@@ -37,7 +37,7 @@ public class SnakesFood {
 	public void collision() {
 		if (z == true) {
 			System.out.println("done");
-			this.x = new Random().nextInt(1920);
+			this.x = new Random().nextInt(1820);
 			this.y = new Random().nextInt(960);
 			snake.pastX.add(0, x);
 			snake.pastY.add(0, y);
