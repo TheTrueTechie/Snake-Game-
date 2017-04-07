@@ -43,14 +43,14 @@ public class SnakesFood {
 
 	public void collision() {
 		if (z == true) {
+			lengthOfSnake++;
 			System.out.println("done");
 			this.x = new Random().nextInt(1820);
-			this.y = new Random().nextInt(960);
+			this.y = new Random().nextInt(900);
 			snake.pastX.add(0, x);
 			snake.pastY.add(0, y);
 			// Snake body + 1
 			snake.growSnake();
-			lengthOfSnake++;
 		}
 	}
 }
