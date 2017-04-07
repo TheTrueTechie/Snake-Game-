@@ -22,11 +22,17 @@ public class SnakesFood {
 		g.setColor(Color.GRAY);
 		g.fillRect(x, y, 10, 10);
 		g.drawRect(x, y, 10, 10);
+		g.setColor(Color.WHITE);
+		g.drawRect(snake.x, snake.y,1, 1);
 	}
 
 	public boolean detectCollision() {
 		if (((snake.x >= this.x && snake.x <= this.x + 10) || (snake.x <= this.x && snake.x >= this.x - 10))
-				&& (snake.y >= this.y && snake.y <= this.y + 10)) {
+				&& (snake.y >= this.y && snake.y <= this.y - 10)) {
+			z = true;
+		}
+		if (((snake.x >= this.x && snake.x <= this.x + 10) || (snake.x <= this.x && snake.x >= this.x - 10))
+				&& (snake.y - 10 >= this.y && snake.y  <= this.y - 10)) {
 			z = true;
 		} else {
 			z = false;
