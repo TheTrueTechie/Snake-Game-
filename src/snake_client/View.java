@@ -1,6 +1,7 @@
 package snake_client;
 import java.awt.Color;
 import java.awt.Graphics;
+import java.util.ArrayList;
 
 import javax.swing.JPanel;
 
@@ -24,7 +25,7 @@ public class View extends JPanel {
 
 	}
 
-	public void setSnake(SnakeModel snakeModel) {
+	public void setSnake(ArrayList <SnakeModel> a) {
 		this.snakeModel = snakeModel;
 		food = snakeModel.food;
 	}

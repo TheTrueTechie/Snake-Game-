@@ -1,11 +1,3 @@
-/Data.class
-/GameController.class
-/MainMenu.class
-/Snake.class
-/SnakeModel.class
-/SnakesFood.class
-/View.class
-/SnakeServer/
-/SnakeClient/
 /snake_client/
+/Server/
 /snake_server/
