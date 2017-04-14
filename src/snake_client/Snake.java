@@ -1,3 +1,4 @@
+package snake_client;
 import javax.swing.JFrame;
 
 public class Snake {

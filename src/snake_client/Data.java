@@ -1,3 +1,4 @@
+package snake_client;
 
 public class Data {
 	SnakeModel snakeModel;

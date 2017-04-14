@@ -1,3 +1,4 @@
+package snake_client;
 import java.awt.Color;
 import java.awt.Graphics;
 
